@@ -20,7 +20,7 @@ use App\Http\Controllers\SiteController;
 use App\Http\Controllers\SuggestController;
 use App\Http\Controllers\TasteController;
 use App\Http\Controllers\TownshipController;
-use App\Http\Controllers\customerInfoController;
+use App\Http\Controllers\CustomerInfoController;
 use App\Http\Controllers\CustomerProfileController;
 use App\Http\Controllers\CustomerProfileUpdate;
 use App\Http\Controllers\DeliveryInfoController;
