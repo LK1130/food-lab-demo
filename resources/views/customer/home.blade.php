@@ -107,7 +107,7 @@
                 <div class="d-flex flex-column justify-content-center align-items-center fw-bold my-3 py-5"
                     id="{{ $sellProduct->product_id }}">
                     <div class="product-imgs">
-                        <img src="{{ url(/storage/$sellProduct->path) }}" alt="bestitem1" width="100%" />
+                        <img src="{{ url('/storage/'$sellProduct->path) }}" alt="bestitem1" width="100%" />
                     </div>
                     <p class="fs-3 pt-2 text-uppercase">{{ $sellProduct->product_name }}</p>
                     <p class="fs-5"><i class="fas fa-coins pe-2 coins"></i> {{ $sellProduct->coin }}</p>
