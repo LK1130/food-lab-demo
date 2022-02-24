@@ -111,5 +111,5 @@
             var coinYearly = @json($coinYearly);
         </script>
         <!-- Join Javascript -->
-        <script src="js/yearlyChart.js"></script>
+        <script src="js/adminYearlyChart.js"></script>
     @endsection

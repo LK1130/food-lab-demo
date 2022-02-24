@@ -89,11 +89,23 @@ class SalesController extends Controller
         foreach ($coinList as $key => $value) {
             array_push($coinArray, $value->totalAmount);
         };
+        $coinMonthly= [];
+        foreach ($coinList as $key => $value) {
+            $monthNumber= $value->month;
+            array_push($orderMonthly, date("F", mktime($monthNumber)));
+        };
 
         // Get Order Monthly Data From T_AD_Order Model //
         $T_AD_Order = new T_AD_Order();
         $orderList =  $T_AD_Order->orderMonthly();
         // Senting monthly order data to monthlyChart.js
+
+        $orderMonthly= [];
+        foreach ($orderList as $key => $value) {
+            $monthNumber= $value->month;
+            array_push($orderMonthly, date("F", mktime($monthNumber)));
+        };
+
         $orderArray = [];
         foreach ($orderList as $key => $value) {
             array_push($orderArray, $value->totalorder);
@@ -107,7 +119,7 @@ class SalesController extends Controller
             'End monthlyChart'
         ]);
 
-        return  view('admin.salesChart.monthlySale', ['coinListtable' => $coinListtable, 'orderList' => $orderListtable, 'orderArray' => $orderArray, 'coinArray' => $coinArray]);
+        return  view('admin.salesChart.monthlySale', ['coinListtable' => $coinListtable, 'orderList' => $orderListtable, 'orderArray' => $orderArray, 'coinArray' => $coinArray, 'orderMonthly'=> $orderMonthly,'coinMonthly' => $coinMonthly]);
     }
     /*
      * Create : Cherry(12/1/2022)

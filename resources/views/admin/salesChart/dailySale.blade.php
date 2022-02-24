@@ -120,5 +120,5 @@
         var coinDaily = @json($coinDaily);
     </script>
     <!-- Join Javascript -->
-    <script src="js/dailyChart.js"></script>
+    <script src="js/adminDailyChart.js"></script>
 @endsection

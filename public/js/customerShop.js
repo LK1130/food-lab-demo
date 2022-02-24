@@ -10,7 +10,7 @@ $(document).ready(function() {
     $('.shopcart').click(function(e) {
 
         clickCount();
-        // checkSameId(e.target.id);
+       
         
         $.ajaxSetup({
             headers: {
@@ -19,7 +19,6 @@ $(document).ready(function() {
                 ),
             },
         });
-
         
         let count = 1;
         if(temArray.includes(e.target.id) == false){

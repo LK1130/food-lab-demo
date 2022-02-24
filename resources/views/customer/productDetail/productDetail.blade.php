@@ -209,7 +209,7 @@
                                 
                             @else
                             <div class="d-flex justify-content-end col-md-6 col-sm-6 mt-3 m-auto  ">
-                                <button class="btn btns" data-bs-toggle="modal" data-bs-target="#modal2">Buy Now</button>
+                                <button class="btn btns" data-bs-toggle="modal" data-bs-target="#modal3">Buy Now</button>
                                
                             </div>
                            
@@ -250,7 +250,7 @@
                         {{-- end modal --}}
 
                         {{--start model --}}
-                        <div id="modal2" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                        <div id="modal3" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                         aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="col-sm-4 modal-dialog modal-dialog-centered " role="document">
                             <div class="modal-content">

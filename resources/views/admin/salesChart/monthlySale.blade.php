@@ -103,9 +103,12 @@
     <script>
         // For Sending Order Array to monthlyChart.js
         var orderArray = @json($orderArray);
+        var orderMonthly = @json($orderMonthly);
+        
         // For Sending Coin Array to monthlyChart.js
         var coinArray = @json($coinArray);
+        var coinMonthly = @json($coinMonthly);
     </script>
     <!-- Join Javascript -->
-    <script src="js/monthlyChart.js"></script>
+    <script src="js/adminMonthlyChart.js"></script>
 @endsection

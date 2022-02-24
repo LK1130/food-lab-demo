@@ -215,6 +215,8 @@ class T_AD_Order extends Model
         ]);
 
         $current = Carbon::now()->year;
+        // $monthName = $current->format('F');
+        
         $order = T_AD_Order::select(
 
             DB::raw('year(order_date) as year'),

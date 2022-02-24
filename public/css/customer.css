@@ -140,6 +140,14 @@
     align-items: center;
 }
 
+.close{
+    width: 5%;
+    height: 5%;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    background: transparent;
+    border: none;
+ }
 .sellers {
     min-width: 95%;
     background: linear-gradient( 120deg, rgba(0, 0, 0, 1) 30%, rgba(245, 0, 0, 0.5) 60%);
