@@ -135,7 +135,7 @@ class T_AD_Photo extends Model
     * */
     public function productImg($id)
     {
-        dd($id);
+        
         $photo = T_AD_Photo::select('path')->where('link_id', $id)->first();
         return $photo;
     }
