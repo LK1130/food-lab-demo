@@ -44,7 +44,6 @@ class CartController extends Controller
                     // for product
                     $m_product = new M_Product();
                     $tAdPhoto = new T_AD_Photo();
-                    dd($productArrays);
                     foreach ($productArrays as $productArray) {
                         $product = $m_product->products((int)$productArray['pid']);
                         $photo = $tAdPhoto->productImg((int)$productArray['pid']);
