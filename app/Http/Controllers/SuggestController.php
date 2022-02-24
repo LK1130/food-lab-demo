@@ -110,7 +110,7 @@ class SuggestController extends Controller
         Log::channel('adminlog')->info("SuggestController", [
             'Start destroy'
         ]);
-        $admin = new T_AD_Suggest();
+        $admin = new M_Suggest();
         $admins = $admin->suggestEditView($id);
         if ($admins === null) {
             Log::channel('adminlog')->info("SuggestController", [
@@ -118,7 +118,7 @@ class SuggestController extends Controller
             ]);
             return view('errors.404');
         } else {
-            $admin = new T_AD_Suggest();
+            $admin = new M_Suggest();
             $admin->suggestDelete($id);
             Log::channel('adminlog')->info("SuggestController", [
                 'End destroy'

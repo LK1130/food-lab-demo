@@ -46,9 +46,9 @@
                         <img src="/storage/newsImage/{{ $allnew->source }}" alt="" class="ms-3 rounded" width="60vw">
                         <div class="titleDateBox">
                             <div class="d-flex flex-column mt-2">
-                                <p class=" fs-5 fw-bolder Wtruncate ">{{ $allnew->title }}
+                                <p class=" fs-5 fw-bolder Wtruncate">{{ $allnew->title }}
                                 </p>
-                                <p class="  fs-5 fw-bolder Wtruncate ">
+                                <p class="  fs-5 fw-bolder Wtruncate">
                                     {{ $allnew->detail }}
                                 </p>
 

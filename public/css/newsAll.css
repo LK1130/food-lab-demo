@@ -1,9 +1,10 @@
 body {
     height: auto;
     background-image: url("/img/Home.png");
-    background-size: cover;
+
     background-repeat: no-repeat;
     background-position: center;
+    background-size: auto;
     position: relative;
 }
 .news-container {
@@ -25,7 +26,7 @@ body {
     border-radius: 1vw;
     background-color: rgb(216, 211, 193);
 }
-.dateDiv{
+.dateDiv {
     color: var(--secondary-color);
     margin-top: 2rem;
 }
@@ -103,19 +104,25 @@ body {
 }
 .Wtruncate {
     min-width: 28vw;
-    text-overflow: ellipsis; 
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .Mtruncate {
     min-width: 12vw;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
 }
-.titleDateBox{
+.titleDateBox {
     display: flex;
     flex-direction: row;
 }
 
 @media (max-width: 720px) {
+    /* body {
+        height: 100vh;
+    } */
     .newsA {
         height: 18vh !important;
         width: 90% !important;
@@ -123,7 +130,7 @@ body {
     .newsImg {
         min-width: 30%;
     }
-    .titleDateBox{
+    .titleDateBox {
         display: flex;
         flex-direction: column;
         width: 70%;
@@ -148,12 +155,13 @@ body {
         margin-right: auto !important;
         margin-left: 2vw !important;
     }
-    .Wtruncate,.Mtruncate {
+    .Wtruncate,
+    .Mtruncate {
         min-width: 100% !important;
         font-size: 1rem !important;
-        text-overflow: ellipsis; 
+        text-overflow: ellipsis;
     }
-    .dateDiv{
+    .dateDiv {
         margin-top: 0rem !important;
     }
     .pagination {
@@ -162,7 +170,6 @@ body {
         display: flex;
         flex-direction: row;
     }
-      
 }
 @media (max-width: 680px) {
     .newsLogoAll {
@@ -172,9 +179,9 @@ body {
     }
 }
 @media (max-width: 450px) {
-    .Wtruncate,.Mtruncate {
+    .Wtruncate,
+    .Mtruncate {
         font-size: 0.9rem !important;
         text-overflow: ellipsis;
     }
 }
-

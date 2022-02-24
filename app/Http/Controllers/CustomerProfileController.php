@@ -25,7 +25,12 @@ class CustomerProfileController extends Controller
         Log::channel('adminlog')->info("CustomerProfileController", [
             'Start index'
         ]);
+
+
         $sessionCustomerId = session()->get('customerId');
+        Log::channel('adminlog')->info("id", [
+            $sessionCustomerId
+        ]);
         $user = new T_CU_Customer();
         $userinfo = $user->loginUser($sessionCustomerId);
 

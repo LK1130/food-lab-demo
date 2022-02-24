@@ -74,8 +74,9 @@ $(document).ready(function () {
                     for (const news of data["limitednews"]) {
                         countNews++;
                         if (countNews == 3)
-                            more = `<a href="/customerNews" class="ms-auto me-2"><button class="btn mb-2 alertButton">
+                            more = `<a href="/customerNews" class=" ms-auto me-3"><button class="btn mb-2 alertButton ms-auto me-2 w-100">
                             More</button></a>`;
+
                         var oneD = 1000 * 60 * 60 * 24;
 
                         var sMS = new Date(news.newscreated);
@@ -135,8 +136,9 @@ $(document).ready(function () {
                     for (const messages of data["limitedmessages"]) {
                         countMessage++;
                         if (countMessage == 3)
-                            more = `<a href="/messages" class="ms-auto me-2"><button class="btn mb-2 alertButton">
-                        More</button></a>`;
+                            more = `<a href="/messages" class=" ms-auto me-3"><button class="btn mb-2 alertButton ms-auto me-2 w-100">
+                            More</button></a>`;
+
                         // $allcolor = ["yellow", "green", "yellow", "red"];
                         // $statusMessage = messages.decision_status;
                         $messagecolor = "";
@@ -159,7 +161,7 @@ $(document).ready(function () {
                     </p>
                     <p class=" fw-bold  mb-1 ">${messages.messagecreated}</p>
                 </div>
-                <img src="img/new.png" alt="" class="newsLogo gleft" >
+                <img src="img/new.png" alt="" class="newsLogo gleft" width="49px">
             </div>
             ${more}
         `
@@ -204,7 +206,7 @@ $(document).ready(function () {
                     for (const tracks of data["limitedtracks"]) {
                         countTrack++;
                         if (countTrack == 3)
-                            more = `<a href="/tracks" class="ms-auto me-2"><button class="btn mb-2 alertButton">
+                            more = `<a href="/tracks" class=" ms-auto me-3"><button class="btn mb-2 alertButton ms-auto me-2 w-100">
                             More</button></a>`;
 
                         $allcolor = [
@@ -428,7 +430,7 @@ $(document).ready(function () {
                         );
                         countNews++;
                         if (countNews == 3)
-                            more = `<a href="/customerNews" class="ms-auto me-2"><button class="btn mb-2 alertButton">
+                            more = `<a href="/customerNews" class=" ms-auto me-3"><button class="btn mb-2 alertButton ms-auto me-2 w-100">
                             More</button></a>`;
                         if (date < 3) {
                             $(".forNews").append(

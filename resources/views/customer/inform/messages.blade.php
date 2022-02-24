@@ -73,7 +73,7 @@
             @if ($allmessage->seen == 0)
                 <div class="newsAll d-flex flex-row justify-content-center messageClick align-items-center mb-4"
                     id="{{ $allmessage->chargeid }}">
-                    <p class="fs-4 fw-bolder me-auto ms-5 mt-3 text-truncate Mtruncate ">{{ $allmessage->detail }}</p>
+                    <p class="fs-4 fw-bolder me-auto ms-5 mt-3 text-truncate  ">{{ $allmessage->detail }}</p>
                     <div class="d-flex flex-column me-5 ms-auto ">
                         <p class="fs-5 fw-bolder me-4 w-100 ms-auto mt-2 rounded text-center {{ $messagecolor }}">
                             {{ $allmessage->title }}
@@ -88,7 +88,7 @@
             @else
                 <div class="newsAll d-flex flex-row justify-content-center messageClick align-items-center mb-4"
                     id="{{ $allmessage->chargeid }}">
-                    <p class="fs-4 fw-bolder me-auto ms-5 mt-3 text-truncate Mtruncate ">{{ $allmessage->detail }}</p>
+                    <p class="fs-4 fw-bolder me-auto ms-5 mt-3 text-truncate  ">{{ $allmessage->detail }}</p>
                     <div class="d-flex flex-column me-5 ms-auto ">
                         <p class="fs-5 fw-bolder me-4 w-100 ms-auto mt-2 rounded text-center {{ $messagecolor }}">
                             {{ $allmessage->title }}

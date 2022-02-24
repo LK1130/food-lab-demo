@@ -26,7 +26,7 @@
         <div class="adminAddForm">
             <form action="{{ route('suggestAdmin.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <p class="formHeader">{{ __('messageZY.add') }} </p>
+                <p class="formHeader">{{ __('messageZY.addsuggest') }} </p>
                 <div>
                     <div class="form-group">
                         <label for="suggest">{{ __('messageZY.suggest') }}</label>

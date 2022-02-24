@@ -191,6 +191,7 @@ class M_Site extends Model
             'End news'
         ]);
         return M_AD_News::select('*', DB::raw('m_ad_news.id AS newsid'))
+            ->orderBy('m_ad_news.updated_at', 'DESC')
             ->where('m_ad_news.del_flg', 0)
             ->join('m_news_category', 'm_news_category.id', '=', 'm_ad_news.category')
             ->paginate(3);

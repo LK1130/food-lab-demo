@@ -44,7 +44,7 @@ class DecisionController extends Controller
         Log::channel('adminlog')->info("DecisionController", [
             'End store'
         ]);
-        return redirect('siteManage');
+        return redirect('app');
     }
     /*
     * Create:zayar(2022/01/15) 
@@ -98,7 +98,7 @@ class DecisionController extends Controller
             Log::channel('adminlog')->info("DecisionController", [
                 'End update'
             ]);
-            return redirect('siteManage');
+            return redirect('app');
         }
     }
     /*
@@ -124,7 +124,7 @@ class DecisionController extends Controller
             Log::channel('adminlog')->info("DecisionController", [
                 'End destroy'
             ]);
-            return redirect('siteManage');
+            return redirect('app');
         }
     }
 }

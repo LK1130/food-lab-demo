@@ -10,8 +10,16 @@ $(document).ready(function () {
         $("#icon").click(function () {
             let attribute = $("#password").attr("type");
             if (attribute == "password") {
+                document
+                    .getElementById("icon")
+                    .setAttribute("name", "eye-outline");
                 $("#password").attr("type", "text");
-            } else $("#password").attr("type", "password");
+            } else {
+                document
+                    .getElementById("icon")
+                    .setAttribute("name", "eye-off-outline");
+                $("#password").attr("type", "password");
+            }
         });
     }
     /*

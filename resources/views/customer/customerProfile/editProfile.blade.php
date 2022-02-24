@@ -54,12 +54,20 @@
                             <input type="text" name="username" id="username" class="InputChild"
                                 value="{{ $user->nickname }}" autocomplete="off">
                         </div>
+                        @error('username')
+                            <span class="errorIcon"><i
+                                    class="fas fa-exclamation-circle fs-3 ms-2 errorPassword text-danger"></i></span>
+                        @enderror
                     </div>
                     <div class="d-flex  me-3 ms-3 mt-0 mb-1 infos">
                         <i class="fas fa-envelope fs-3 me-4 mt-2 text-light"></i>
                         <div class="InputParent">
                             <input type="text" id="email" class="InputChild" value="{{ $user->email }}" readonly>
                         </div>
+                        @error('email')
+                            <span class="errorIcon"><i
+                                    class="fas fa-exclamation-circle fs-3 ms-2 errorPassword text-danger"></i></span>
+                        @enderror
                     </div>
 
                     <div class="d-flex  me-3 ms-3 mt-0 mb-1 infos">
@@ -83,6 +91,10 @@
                                 @endforelse
                             </select>
                         </div>
+                        @error('state')
+                            <span class="errorIcon"><i
+                                    class="fas fa-exclamation-circle fs-3 ms-2 errorPassword text-danger"></i></span>
+                        @enderror
                     </div>
                     <div class="d-flex  me-3 ms-3 mt-0 mb-1 infos">
                         <i class="fas fa-phone-alt fs-3 me-4 mt-2 text-light"></i>
@@ -90,6 +102,10 @@
                             <input type="number" name="phonenumber" id="phonenumber" class="InputChild"
                                 value="{{ $user->phone }}" autocomplete="off">
                         </div>
+                        @error('phonenumber')
+                            <span class="errorIcon"><i
+                                    class="fas fa-exclamation-circle fs-3 ms-2 errorPassword text-danger"></i></span>
+                        @enderror
                     </div>
 
                     <div class="d-flex  me-3 ms-3 mt-0 mb-1 infos">
@@ -101,24 +117,12 @@
                                     $userTownship = $user->address2;
                                 @endphp
                                 <input type="text" value="{{ $userTownship }}" class="hide" id="oldts">
-
-                                {{-- @php
-                                    $userTownship = $user->address2;
-                                @endphp
-                                @forelse($townships as $township)
-                                    @if ($userTownship == $township->id)
-                                        <option value="{{ $township->id }}" class="text-dark oldTs" selected>
-                                            {{ $township->township_name }}</option>
-                                    @else
-                                        <option value="{{ $township->id }}" class="text-dark oldTs">
-                                            {{ $township->township_name }}
-                                        </option>
-                                    @endif
-                                @empty
-                                    <option>{{ __('messageZY.notownship') }} .</option>
-                                @endforelse --}}
                             </select>
                         </div>
+                        @error('township')
+                            <span class="errorIcon"><i
+                                    class="fas fa-exclamation-circle fs-3 ms-2 errorPassword text-danger"></i></span>
+                        @enderror
                     </div>
                     <div class="d-flex  me-3 ms-3 mt-0 mb-1 infos">
                         <i class="fas fa-utensils fs-3 me-4 mt-2 text-light"></i>
@@ -141,6 +145,10 @@
                             </select>
 
                         </div>
+                        @error('Taste')
+                            <span class="errorIcon"><i
+                                    class="fas fa-exclamation-circle fs-3 ms-2 errorPassword text-danger"></i></span>
+                        @enderror
                     </div>
                     <div class="d-flex  me-3 ms-3 mt-0 mb-1 infos">
                         <i class="fas fa-address-book fs-3 me-4 mt-2 text-light"></i>
@@ -148,13 +156,22 @@
                             <input type="text" name="addressNumber" id="addressNumber" class="InputChild"
                                 value="{{ $user->address3 }}" autocomplete="off">
                         </div>
+                        @error('addressNumber')
+                            <span class="errorIcon"><i
+                                    class="fas fa-exclamation-circle fs-3 ms-2 errorPassword text-danger"></i></span>
+                        @enderror
                     </div>
                     <div class="d-flex  me-3 ms-3 mt-0 mb-1 infos">
                         <i class="fas fa-pen-square fs-3 me-4 mt-2 text-light"></i>
                         <div class="InputParent">
                             <input type="text" name="bio" id="nickname" class="InputChild" value="{{ $user->bio }}"
                                 autocomplete="off">
+
                         </div>
+                        @error('bio')
+                            <span class="errorIcon"><i
+                                    class="fas fa-exclamation-circle fs-3 ms-2 errorPassword text-danger"></i></span>
+                        @enderror
                     </div>
                     <div class="d-flex  me-3 ms-3 mt-0 mb-2 infos" id="favType">
                         <i class="fas fa-grin-hearts fs-3 me-4 mt-2 text-light"></i>
@@ -174,7 +191,7 @@
                             </select>
                         </div> --}}
                         <div class="InputParent" id="favType2">
-                            <input type="text" value="{{ $user->fav_type }}" id="favTypesInput"
+                            <input type="text" value="{{ $user->fav_type }}" name="favtype" id="favTypesInput"
                                 data-role="tagsinput">
                         </div>
                     </div>
@@ -184,6 +201,10 @@
                             <input type="text" name="Allergic" id="Allergic" class="InputChild"
                                 value="{{ $user->allergic }}" autocomplete="off">
                         </div>
+                        @error('Allergic')
+                            <span class="errorIcon"><i
+                                    class="fas fa-exclamation-circle fs-3 ms-2 errorPassword text-danger"></i></span>
+                        @enderror
                     </div>
 
                     <div class="btnDiv">

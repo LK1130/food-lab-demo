@@ -269,11 +269,11 @@
                     </div>
                 @else
                     <div class="headerInform d-flex flex-row justify-content-center align-items-center  mt-2">
-                        <div>
-                            <p class="fw-bolder fs-5 text-center  infromTitle" id="clickNews">
-                                {{ __('messageZY.new') }}
-                            </p>
-                        </div>
+
+                        <p class="fw-bolder fs-5 text-center  infromTitle" id="clickNews">
+                            {{ __('messageZY.new') }}
+                        </p>
+
                     </div>
                     <div class="forNews d-flex flex-column" id="forNews">
 

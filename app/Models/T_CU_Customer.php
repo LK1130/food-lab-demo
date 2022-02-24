@@ -240,7 +240,7 @@ class T_CU_Customer extends Model
     $customercoin = new Method();
     $coin = $customercoin->customerCoin();
 
-    DB::transaction(function () use ($customerId, $data, $key ,$coin) {
+    DB::transaction(function () use ($customerId, $data, $key, $coin) {
       //insert customer
       $customer = new T_CU_Customer();
       $customer->customerID = $customerId;
@@ -263,10 +263,10 @@ class T_CU_Customer extends Model
       $customerLogin->save();
 
       //insert customer coin
-        $customerCoin = new T_CU_Coin_Customer();
-        $customerCoin->customer_id = $customer->id;
-        $customerCoin->remain_coin = $coin;
-        $customerCoin->save();
+      $customerCoin = new T_CU_Coin_Customer();
+      $customerCoin->customer_id = $customer->id;
+      $customerCoin->remain_coin = $coin;
+      $customerCoin->save();
 
       // $customer->customerLogin()->save($customerLogin);
     });
@@ -297,12 +297,17 @@ class T_CU_Customer extends Model
     Log::channel('adminlog')->info("ok", [
       $sessionCustomerId
     ]);
-    $search = T_CU_Customer::select('*', DB::raw('t_cu_customer.id AS cid'))
-      ->where('t_cu_customer.id', '=', $sessionCustomerId)
-
-      ->join('m_cu_customer_login', 'm_cu_customer_login.customer_id', '=', 't_cu_customer.id')
+    $search = T_CU_Customer::join('m_cu_customer_login', 'm_cu_customer_login.customer_id', '=', 't_cu_customer.id')
+      ->where('m_cu_customer_login.customer_id', '=', $sessionCustomerId)
       ->join('m_township', 'm_township.id', '=', 't_cu_customer.address2')
       ->join('m_state', 'm_state.id', '=', 't_cu_customer.address1')
+      ->select(
+        '*',
+        DB::raw('t_cu_customer.id AS cid'),
+        DB::raw('m_cu_customer_login.id AS lid'),
+        DB::raw('m_township.id AS tid'),
+        DB::raw('m_state.id AS sid')
+      )
       // ->join('m_fav_type', 'm_fav_type.id', '=', 't_cu_customer.fav_type')
       // ->join('m_taste', 'm_taste.id', '=', 't_cu_customer.taste')
       ->first();
@@ -315,7 +320,7 @@ class T_CU_Customer extends Model
       Log::channel('adminlog')->info("T_CU_Customer Model", [
         'End loginUser'
       ]);
-      Log::channel('adminlog')->info("T_CU_Customer Model", [
+      Log::channel('adminlog')->info("T_found", [
         $search
       ]);
       return $search;
