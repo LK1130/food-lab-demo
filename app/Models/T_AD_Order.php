@@ -410,7 +410,6 @@ class T_AD_Order extends Model
             $tAdOrder->order_status = 1;
             $tAdOrder->order_date =  date('Y-m-d');
             $tAdOrder->order_time = date('H:i:s');
-            $tAdOrder->last_control_by = 0;
             $tAdOrder->save();
 
             foreach ($products as $product) {

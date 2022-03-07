@@ -47,7 +47,7 @@ class CartController extends Controller
                     foreach ($productArrays as $productArray) {
                         $product = $m_product->products((int)$productArray['pid']);
                         $photo = $tAdPhoto->productImg((int)$productArray['pid']);
-                        $product['path'] = $photo['path'];
+                        $product['path'] = $photo->path;
                         array_push($products, $product);
                     }
 
